@@ -107,6 +107,8 @@ public class BankPage {
      * @author Мороз Сергей LuvMiit
      */
     public double currencyExchange(String currency){
+        visibilityChecker.visibilityWait("//tr[@class='card-rates-table__row']//td[@class='card-rates-table__cell card-rates-table__sale large-text']");
+        visibilityChecker.visibilityWait("//tr[@class='card-rates-table__row']//td[@class='card-rates-table__cell card-rates-table__purchase large-text']");
         int rowIndex = 0;
         for (int i = 1; i < rowsInTable.size()-15; i++) {
             if(rowsInTable.get(i).getText().contains(currency)){
