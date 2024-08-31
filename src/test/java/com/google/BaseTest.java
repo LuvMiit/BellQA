@@ -8,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+
+import static org.example.helpers.CustomWait.implicitlyWait;
+import static org.example.helpers.Properties.testProperties;
+
 /**
  * Базовый класс тестов с начальными настройками
  * @author Мороз Сергей LuvMiit
@@ -35,18 +39,15 @@ public class BaseTest {
                 .manage()
                 .window()
                 .maximize();
-        chromeDriver
-                .manage()
-                .timeouts()
-                .implicitlyWait(Duration.ofSeconds(30));
+        implicitlyWait(chromeDriver, testProperties.defaultTimeout());
 
     }
     /**
      * Метод после каждого теста закрывает браузер и все вкладки.
      * @author Мороз Сергей LuvMiit
      */
-    @AfterEach
-    public void afterEach() {
-        chromeDriver.quit();
-    }
+//    @AfterEach
+//    public void afterEach() {
+//        chromeDriver.quit();
+//    }
 }

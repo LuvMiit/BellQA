@@ -1,14 +1,13 @@
 package com.google;
 
-import dev.failsafe.internal.util.Assert;
-import org.example.pages.BankPage;
-import org.example.pages.MainPage;
-import org.example.pages.PageWithResults;
-import org.example.pages.WikiPage;
+import org.example.pagesForBankAndWiki.BankPage;
+import org.example.pagesForBankAndWiki.MainPage;
+import org.example.pagesForBankAndWiki.PageWithResults;
+import org.example.pagesForBankAndWiki.WikiPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.openqa.selenium.WebElement;
+
 /**
  * Класс тестов по заданию 1
  * @author Мороз Сергей LuvMiit
